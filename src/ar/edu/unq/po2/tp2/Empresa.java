@@ -11,22 +11,41 @@ public class Empresa {
 	public Empresa(String nombre, int cuit) {
 		this.nombre = nombre;
 		this.cuit = cuit;
+		this.empleados = new ArrayList<Empleado>();
+		this.recibos = new ArrayList<ReciboDeHaberes>();
 	}
 	
 	public void agregarEmpleado(Empleado empleado) {
 		empleados.add(empleado);
 	}
 	
-	public Float totalSueldosNetos() {
-		Float contador = 0f;
-		
+	public double totalSueldosNetos() {
+		double sueldosNetos = 0;
 		for (Empleado empleado : empleados) {
-			contador += empleado.sueldoNeto();
+			sueldosNetos += empleado.sueldoNeto();
 		}
+		return sueldosNetos;
 	}
 	
+	public double totalSueldosBrutos() {
+		double sueldosBrutos = 0;
+				for (Empleado empleado : empleados) {
+			sueldosBrutos += empleado.sueldoBruto();
+		}
+		return sueldosBrutos;
+	}
 	
+	public double totalRetenciones() {
+		double retenciones = 0;
+		for (Empleado empleado : empleados) {
+			retenciones += empleado.retenciones();
+		}
+		return retenciones;
+	}
 	
+	public void liquidarSueldos() {
+		
+	}
 	
 	
 }

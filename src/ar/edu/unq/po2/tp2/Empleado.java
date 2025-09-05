@@ -8,11 +8,11 @@ public abstract class Empleado {
 
 	private String nombre;
 	private String direccion;
-	private boolean estadoCivil; // para el contexto del ejercicio, solo importa si es o no casado.
+	private boolean estadoCivil; // para el contexto del ejercicio, solo importa si es o no casado. True = casado, False = soltero.
 	private LocalDate fechaNac;
-	private Float sueldoBasico; 
+	private double sueldoBasico; 
 	
-	public Empleado(String nombre, String direccion, boolean estadoCivil, LocalDate fechaNac, Float sueldoBasico) {
+	public Empleado(String nombre, String direccion, boolean estadoCivil, LocalDate fechaNac, double sueldoBasico) {
 		super();
 		this.nombre = nombre;
 		this.direccion = direccion;
@@ -41,10 +41,10 @@ public abstract class Empleado {
 		return fechaNac;
 	}
 
-	public Float getSueldoBasico() {
+	public double getSueldoBasico() {
 		return sueldoBasico;
 	}
-	public void setSueldoBasico(Float sueldoBasico) {
+	public void setSueldoBasico(double sueldoBasico) {
 		this.sueldoBasico = sueldoBasico;
 	}
 	
@@ -55,11 +55,11 @@ public abstract class Empleado {
 		return edad;
 	}
 	
-	public abstract Float sueldoBruto();
+	public abstract double sueldoBruto();
 	
-	public abstract Float retenciones();
+	public abstract double retenciones();
 	
-	public Float sueldoNeto() {
+	public double sueldoNeto() {
 		return this.sueldoBruto() - this.retenciones();
 	}
 	
