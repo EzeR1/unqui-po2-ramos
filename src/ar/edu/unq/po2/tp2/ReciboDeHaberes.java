@@ -45,6 +45,10 @@ public class ReciboDeHaberes {
 		return conceptos;
 	}
 	
+	public void agregarConceptos(ArrayList <Concepto> conceptos) {
+		conceptos.addAll(conceptos);
+	}
+	
 	public void imprimirRecibo() {
 		System.out.println("----------------------------------");
 		System.out.println("Recibo de Haberes");

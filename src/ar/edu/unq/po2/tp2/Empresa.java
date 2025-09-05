@@ -44,8 +44,16 @@ public class Empresa {
 	}
 	
 	public void liquidarSueldos() {
-		
+		for (Empleado empleado : empleados) {
+			this.generarReciboDeEmpleado(empleado);
+		}
 	}
 	
+	public void generarReciboDeEmpleado(Empleado empleado) {
+		ReciboDeHaberes recibo = new ReciboDeHaberes(empleado);
+		recibo.agregarConceptos(empleado.calcularConceptos());
+		recibos.add(recibo);
+		recibo.imprimirRecibo();
+	}
 	
 }
