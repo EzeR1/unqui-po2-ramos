@@ -15,6 +15,22 @@ public class Empresa {
 		this.recibos = new ArrayList<ReciboDeHaberes>();
 	}
 	
+	public String getNombre() {
+		return nombre;
+	}
+
+	public int getCuit() {
+		return cuit;
+	}
+
+	public ArrayList<Empleado> getEmpleados() {
+		return empleados;
+	}
+
+	public ArrayList<ReciboDeHaberes> getRecibos() {
+		return recibos;
+	}
+
 	public void agregarEmpleado(Empleado empleado) {
 		empleados.add(empleado);
 	}

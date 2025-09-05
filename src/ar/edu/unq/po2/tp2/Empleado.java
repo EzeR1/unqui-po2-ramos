@@ -13,7 +13,6 @@ public abstract class Empleado {
 	private double sueldoBasico; 
 	
 	public Empleado(String nombre, String direccion, boolean estadoCivil, LocalDate fechaNac, double sueldoBasico) {
-		super();
 		this.nombre = nombre;
 		this.direccion = direccion;
 		this.estadoCivil = estadoCivil;

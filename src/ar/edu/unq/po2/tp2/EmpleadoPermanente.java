@@ -16,8 +16,7 @@ public class EmpleadoPermanente extends Empleado {
 	private static final double retencionJubilacion = 0.15;
 	
 	
-	public EmpleadoPermanente(String nombre, String direccion, boolean estadoCivil, LocalDate fechaNac,
-			Float sueldoBasico, int cantHijos, int antiguedad) {
+	public EmpleadoPermanente(String nombre, String direccion, boolean estadoCivil, LocalDate fechaNac, double sueldoBasico, int cantHijos, int antiguedad) {
 		super(nombre, direccion, estadoCivil, fechaNac, sueldoBasico);
 		this.cantHijos = cantHijos;
 		this.antiguedad = antiguedad;

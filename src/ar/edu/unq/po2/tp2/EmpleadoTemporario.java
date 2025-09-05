@@ -14,8 +14,7 @@ public class EmpleadoTemporario extends Empleado {
 	private static final double retencionJubilacion = 0.1;
 	private static final int retencionJubilacionHoraExtra = 5;
 	
-	public EmpleadoTemporario(String nombre, String direccion, boolean estadoCivil, LocalDate fechaNac,
-			Float sueldoBasico, LocalDate fechaFin, int cantHorasExtra) {
+	public EmpleadoTemporario(String nombre, String direccion, boolean estadoCivil, LocalDate fechaNac, double sueldoBasico, LocalDate fechaFin, int cantHorasExtra) {
 		super(nombre, direccion, estadoCivil, fechaNac, sueldoBasico);
 		this.fechaFin = fechaFin;
 		this.cantHorasExtra = cantHorasExtra;
