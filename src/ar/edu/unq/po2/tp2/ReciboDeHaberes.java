@@ -45,8 +45,8 @@ public class ReciboDeHaberes {
 		return conceptos;
 	}
 	
-	public void agregarConceptos(ArrayList <Concepto> conceptos) {
-		conceptos.addAll(conceptos);
+	public void agregarConceptos(ArrayList <Concepto> conceptosAAgregar) {
+		conceptos.addAll(conceptosAAgregar);
 	}
 	
 	public void imprimirRecibo() {

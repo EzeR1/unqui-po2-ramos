@@ -52,7 +52,7 @@ public class EmpleadoPermanente extends Empleado {
 	}
 	
 	public int salarioAntiguedad() {
-		return this.getAntiguedad() + valorAñoAntiguedad;
+		return this.getAntiguedad() * valorAñoAntiguedad;
 	}
 	
 	@Override
@@ -75,16 +75,16 @@ public class EmpleadoPermanente extends Empleado {
 	
 	@Override
 	public ArrayList<Concepto> calcularConceptos() {
-		ArrayList<Concepto> conceptos = new ArrayList<>(); 
+		ArrayList<Concepto> conceptosARetornar = new ArrayList<>(); 
 
-		conceptos.add(new Concepto("Sueldo Basico", this.getSueldoBasico()));
-		conceptos.add(new Concepto("Salario familiar", this.salarioFamiliar()));
-		conceptos.add(new Concepto("Salario antiguedad", this.salarioAntiguedad()));
-		conceptos.add(new Concepto("Aporte obra social", this.aporteObraSocial()));
-		conceptos.add(new Concepto("Aporte jubilatorio", this.aporteJubilatorio()));
+		conceptosARetornar.add(new Concepto("Sueldo Basico", this.getSueldoBasico()));
+		conceptosARetornar.add(new Concepto("Salario familiar", this.salarioFamiliar()));
+		conceptosARetornar.add(new Concepto("Salario antiguedad", this.salarioAntiguedad()));
+		conceptosARetornar.add(new Concepto("Aporte obra social", this.aporteObraSocial()));
+		conceptosARetornar.add(new Concepto("Aporte jubilatorio", this.aporteJubilatorio()));
 		
 		
-		return conceptos;
+		return conceptosARetornar;
 	}
 	
 }

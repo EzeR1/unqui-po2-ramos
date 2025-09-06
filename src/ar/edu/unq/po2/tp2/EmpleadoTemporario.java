@@ -65,13 +65,13 @@ public class EmpleadoTemporario extends Empleado {
 
 	@Override
 	public ArrayList<Concepto> calcularConceptos() {
-		ArrayList<Concepto> conceptos = new ArrayList<Concepto>(); 
+		ArrayList<Concepto> conceptosARetornar = new ArrayList<Concepto>(); 
 
-		conceptos.add(new Concepto("Sueldo Basico", this.getSueldoBasico()));
-		conceptos.add(new Concepto("Horas extra", this.pagoHorasExtra()));
-		conceptos.add(new Concepto("Aporte obra social", this.aporteObraSocial()));
-		conceptos.add(new Concepto("Aporte jubilatorio", this.aporteJubilatorio()));
+		conceptosARetornar.add(new Concepto("Sueldo Basico", this.getSueldoBasico()));
+		conceptosARetornar.add(new Concepto("Horas extra", this.pagoHorasExtra()));
+		conceptosARetornar.add(new Concepto("Aporte obra social", this.aporteObraSocial()));
+		conceptosARetornar.add(new Concepto("Aporte jubilatorio", this.aporteJubilatorio()));
 		
-		return conceptos;
+		return conceptosARetornar;
 	}
 }
